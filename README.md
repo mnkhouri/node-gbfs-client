@@ -1,5 +1,8 @@
 # Node GBFS Client
 
+[![Build Status](https://img.shields.io/circleci/project/github/mnkhouri/node-gbfs-client.svg)](https://circleci.com/gh/mnkhouri/node-gbfs-client)
+[![NPM Status](https://img.shields.io/npm/v/gbfs-client.svg)](https://www.npmjs.org/package/gbfs-client)
+
 Lightweight client for General Bikeshare Feed Specification (GBFS) feeds, compatible with the Citibike NYC API.
 
 ## Installation
