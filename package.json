@@ -1,6 +1,6 @@
 {
   "name": "gbfs-client",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "General Bikeshare Feed Specification (GBFS) client, compatible with Citibike NYC API",
   "main": "index.js",
   "scripts": {
