@@ -68,6 +68,12 @@ describe('gbfsClient', function () {
           assert.notEqual(station.station_id, undefined);
         })
     })
+    it('rejects on invalid station', function () {
+      return gbfsClient.stationStatus('invalid_id')
+        .catch(function (err) {
+          assert.equal(err.message, 'Station ID invalid_id not found');
+        })
+    })
   })
 })
 
