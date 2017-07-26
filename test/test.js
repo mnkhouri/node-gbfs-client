@@ -36,11 +36,36 @@ describe('httpClient', function () {
 })
 
 describe('gbfsClient', function () {
+  describe('#system()', function () {
+    it('returns system info', function () {
+      return gbfsClient.system()
+        .then(function (system) {
+          assert.equal(system.system_id, 'NYC');
+          assert.equal(system.name, 'Citi Bike');
+        })
+    })
+  })
+
   describe('#stations()', function () {
-    it('returns stations', function () {
+    it('returns station info', function () {
       return gbfsClient.stations()
         .then(function (stations) {
-          assert.notEqual(stations[0].station_ids, undefined);
+          assert.notEqual(stations[0].station_id, undefined);
+        })
+    })
+  })
+
+  describe('#stationStatus()', function () {
+    it('returns status for all stations', function () {
+      return gbfsClient.stationStatus()
+        .then(function (stations) {
+          assert.notEqual(stations[0].station_id, undefined);
+        })
+    })
+    it('returns status for a specific station', function () {
+      return gbfsClient.stationStatus('325')
+        .then(function (station) {
+          assert.notEqual(station.station_id, undefined);
         })
     })
   })
