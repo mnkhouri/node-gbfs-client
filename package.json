@@ -11,14 +11,10 @@
     "url": "git+https://mnkhouri@github.com/mnkhouri/node-gbfs-client.git"
   },
   "keywords": [
+    "Citibike",
     "GBFS",
-    "General",
-    "Bikeshare",
-    "Feed",
-    "Specification",
-    "Citibike",
-    "Citibike",
-    "NYC"
+    "General Bikeshare Feed Specification",
+    "Citi Bike"
   ],
   "author": "Marc Khouri <marc@khouri.ca>",
   "license": "MIT",
