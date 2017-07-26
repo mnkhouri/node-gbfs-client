@@ -1,6 +1,6 @@
 # Node GBFS Client
 
-General Bikeshare Feed Specification (GBFS) client, compatible with the Citibike NYC API.
+Lightweight client for General Bikeshare Feed Specification (GBFS) feeds, compatible with the Citibike NYC API.
 
 ## Installation
 
@@ -13,9 +13,13 @@ npm install gbfs-client --save
 ```js
 const GbfsClient = require('gbfs-client');
 const gbfsClient = new GbfsClient('https://gbfs.citibikenyc.com/gbfs/en/');
-gbfsClient.system().then(system => console.log(system));
-gbfsClient.stations().then(stations => console.log(stations));
-gbfsClient.stationStatus('124').then(stationStatus => console.log(stationStatus));
+
+gbfsClient.system()
+    .then(system => console.log(system));
+gbfsClient.stations()
+    .then(stations => console.log(stations));
+gbfsClient.stationStatus('124')
+    .then(stationStatus => console.log(stationStatus));
 ```
 
 ### new GbfsClient(_baseUrl_)
