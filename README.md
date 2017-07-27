@@ -25,14 +25,25 @@ gbfsClient.system()
           language: 'en',
           name: 'Citi Bike',
           ... */
-gbfsClient.stations()
+
+gbfsClient.stationInfo()
     .then(stations => console.log(stations));
     /* [ { station_id: '72',
             name: 'W 52 St & 11 Ave',
             short_name: '6926.01',
             lat: 40.76727216,
             lon: -73.99392888,
+            ...
+        ] */
+gbfsClient.stationInfo('72')
+    .then(stationInfo => console.log(stationInfo));
+    /* { station_id: '72',
+            name: 'W 52 St & 11 Ave',
+            short_name: '6926.01',
+            lat: 40.76727216,
+            lon: -73.99392888,
             ... */
+
 gbfsClient.stationStatus('72')
     .then(stationStatus => console.log(stationStatus));
     /*  { station_id: '72',
@@ -49,9 +60,10 @@ gbfsClient.stationStatus('72')
 
 - Returns a promise for a JSON object with system information. See the [GBFS system information spec](https://github.com/NABSA/gbfs/blob/master/gbfs.md#system_informationjson) for a list of the JSON fields.
 
-### gbfsClient.stations()
+### gbfsClient.stationInfo()
 
-- Returns a promise for a JSON array with station information for all stations. See the [GBFS station information spec](https://github.com/NABSA/gbfs/blob/master/gbfs.md#station_informationjson) for a list of the JSON fields.
+- `stationId`: optional id for a specific station. If this parameter is not provided, an array of info for all stations will be returned.
+- Returns a promise for a JSON object with station information for one or all stations. See the [GBFS station information spec](https://github.com/NABSA/gbfs/blob/master/gbfs.md#station_informationjson) for a list of the JSON fields.
 
 ### gbfsClient.stationStatus(_stationId_)
 

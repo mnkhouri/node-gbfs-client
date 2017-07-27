@@ -46,11 +46,17 @@ describe('gbfsClient', function () {
     })
   })
 
-  describe('#stations()', function () {
+  describe('#stationInfo()', function () {
     it('returns station info', function () {
-      return gbfsClient.stations()
+      return gbfsClient.stationInfo()
         .then(function (stations) {
           assert.notEqual(stations[0].station_id, undefined);
+        })
+    })
+    it('returns status for a specific station', function () {
+      return gbfsClient.stationInfo('325')
+        .then(function (station) {
+          assert.equal(station.station_id, '325');
         })
     })
   })
@@ -65,7 +71,7 @@ describe('gbfsClient', function () {
     it('returns status for a specific station', function () {
       return gbfsClient.stationStatus('325')
         .then(function (station) {
-          assert.notEqual(station.station_id, undefined);
+          assert.equal(station.station_id, '325');
         })
     })
     it('rejects on invalid station', function () {

@@ -8,7 +8,7 @@ gbfsClient.system()
   .then(system => console.log(`System name: ${system.name}`));
 
 // Get station info for all stations
-gbfsClient.stations()
+gbfsClient.stationInfo()
   .then(stations => {
     const stationCount = stations.length;
     // get a renadom number between 1 and stationCount
