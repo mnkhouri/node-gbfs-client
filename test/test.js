@@ -82,13 +82,3 @@ describe('gbfsClient', function () {
     })
   })
 })
-
-describe('index', function () {
-  describe('index', function () {
-    it('loads', function () {
-      const GBFS = require('../index');
-      const gbfs = new GBFS();
-      assert.notEqual(gbfs, undefined);
-    })
-  })
-})
