@@ -7,7 +7,9 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
-    "test": "npm run build && nyc --reporter=text mocha"
+    "lint": "tslint --fix --project tsconfig.json --config tslint.json",
+    "tests": "nyc --reporter=text mocha",
+    "test": "npm run build && npm run lint && npm run tests"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "@types/node": "^8.0.17",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3",
+    "tslint": "^5.6.0",
     "typescript": "^2.4.2"
   }
 }

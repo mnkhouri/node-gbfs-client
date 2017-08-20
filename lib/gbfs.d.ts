@@ -1,17 +1,12 @@
-import { SystemInfo, StationInfo, StationStatus } from './types';
+import { StationInfo, StationStatus, SystemInfo } from './types';
 declare class GbfsClient {
-    urls: {
-        base: string;
-        systemInfo: string;
-        stationInfo: string;
-        stationStatus: string;
-    };
-    constructor(baseUrl: string | undefined);
+    private urls;
+    constructor(baseUrl?: string);
     system(): Promise<SystemInfo>;
     stationInfo(stationId: string): Promise<StationInfo[]>;
     stationInfo(): Promise<StationInfo>;
     stationStatus(stationId: string): Promise<StationStatus[]>;
     stationStatus(): Promise<StationStatus>;
-    stations(url: string, stationId?: string): Promise<any>;
+    private stations(url, stationId?);
 }
 export = GbfsClient;

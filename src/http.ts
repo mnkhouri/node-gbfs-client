@@ -1,5 +1,5 @@
-import * as https from 'https';
 import * as http from 'http';
+import * as https from 'https';
 
 // Promisified http(s) get
 export function get(url: string): Promise<string> {
@@ -12,10 +12,10 @@ export function get(url: string): Promise<string> {
         reject(new Error(`Failure: status code ${res.statusCode}`));
       }
 
-      const body: (string|Buffer)[] = [];
+      const body: Array<string|Buffer> = [];
       res.on('data', (chunk) => body.push(chunk));
       res.on('end', () => resolve(body.join('')));
 
     }).on('error', (err) => reject(err));
-  })
+  });
 }
