@@ -1,4 +1,4 @@
-const GbfsClient = require('../index');
+const GbfsClient = require('../lib/gbfs.js');
 
 // Initialize the module with the GBFS feed url for CitiBike NYC
 const gbfsClient = new GbfsClient('https://gbfs.citibikenyc.com/gbfs/en/');

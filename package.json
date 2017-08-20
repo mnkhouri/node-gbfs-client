@@ -2,9 +2,10 @@
   "name": "gbfs-client",
   "version": "0.6.0",
   "description": "General Bikeshare Feed Specification (GBFS) client, compatible with Citibike NYC API",
-  "main": "./lib/gbfs.js",
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "scripts": {
-    "test": "nyc --reporter=text mocha"
+    "test": "tsc && nyc --reporter=text mocha"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/mnkhouri/node-gbfs-client#readme",
   "devDependencies": {
+    "@types/node": "^8.0.17",
     "mocha": "^3.4.2",
-    "nyc": "^11.0.3"
+    "nyc": "^11.0.3",
+    "typescript": "^2.4.2"
   }
 }
