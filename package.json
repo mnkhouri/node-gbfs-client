@@ -5,7 +5,9 @@
   "main": "./lib/gbfs.js",
   "types": "./lib/gbfs.d.ts",
   "scripts": {
-    "test": "tsc && nyc --reporter=text mocha"
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "npm run build && nyc --reporter=text mocha"
   },
   "repository": {
     "type": "git",

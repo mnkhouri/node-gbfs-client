@@ -55,4 +55,4 @@ class GbfsClient {
   };
 }
 
-module.exports = GbfsClient;
+export = GbfsClient;
