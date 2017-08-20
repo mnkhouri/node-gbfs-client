@@ -11,7 +11,7 @@ gbfsClient.system()
 gbfsClient.stationInfo()
   .then(stations => {
     const stationCount = stations.length;
-    // get a renadom number between 1 and stationCount
+    // select a random station in the array of stations
     const randomNumber = Math.floor(Math.random() * stationCount);
     console.log(`Station count: ${stationCount}`);
     console.log(`Station info for a random station:`);

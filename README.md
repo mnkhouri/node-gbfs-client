@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/circleci/project/github/mnkhouri/node-gbfs-client.svg)](https://circleci.com/gh/mnkhouri/node-gbfs-client)
 [![NPM Status](https://img.shields.io/npm/v/gbfs-client.svg)](https://www.npmjs.org/package/gbfs-client)
 
-Lightweight client for General Bikeshare Feed Specification (GBFS) feeds, with a Promise-based API.
+Lightweight client for General Bikeshare Feed Specification (GBFS) feeds, with a Promise-based API and full type definitions (Typescript).
 
 Compatible with the CitiBike NYC API.
 
@@ -60,7 +60,7 @@ gbfsClient.stationStatus('72')
 
 - Returns a promise for a JSON object with system information. See the [GBFS system information spec](https://github.com/NABSA/gbfs/blob/master/gbfs.md#system_informationjson) for a list of the JSON fields.
 
-### gbfsClient.stationInfo()
+### gbfsClient.stationInfo(_stationId_)
 
 - `stationId`: optional id for a specific station. If this parameter is not provided, an array of info for all stations will be returned.
 - Returns a promise for a JSON object with station information for one or all stations. See the [GBFS station information spec](https://github.com/NABSA/gbfs/blob/master/gbfs.md#station_informationjson) for a list of the JSON fields.
