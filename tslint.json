@@ -1,0 +1,16 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "max-line-length": [true, 140],
+        "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+        "object-literal-shorthand": false,
+        "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+        "interface-name": false
+    },
+    "jsRules": {
+        "max-line-length": [true, 140],
+        "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+        "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+        "object-literal-shorthand": false
+    }
+}
