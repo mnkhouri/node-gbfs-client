@@ -1,5 +1,7 @@
 # Node GBFS Client (CitiBike and others)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mnkhouri/node-gbfs-client.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://img.shields.io/circleci/project/github/mnkhouri/node-gbfs-client.svg)](https://circleci.com/gh/mnkhouri/node-gbfs-client)
 [![NPM Status](https://img.shields.io/npm/v/gbfs-client.svg)](https://www.npmjs.org/package/gbfs-client)
 
