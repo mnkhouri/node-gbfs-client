@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mnkhouri/node-gbfs-client#readme",
   "devDependencies": {
-    "@types/node": "^8.0.17",
+    "@types/node": "^10.12.21",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3",
     "tslint": "^5.6.0",
