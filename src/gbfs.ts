@@ -25,14 +25,14 @@ class GbfsClient {
       });
   }
 
-  public stationInfo(stationId: string): Promise<StationInfo[]>;
-  public stationInfo(): Promise<StationInfo>;
+  public stationInfo(stationId: string): Promise<StationInfo>;
+  public stationInfo(): Promise<StationInfo[]>;
   public stationInfo(stationId?: string): Promise<StationInfo | StationInfo[]> {
     return this.stations(this.urls.stationInfo, stationId);
   }
 
-  public stationStatus(stationId: string): Promise<StationStatus[]>;
-  public stationStatus(): Promise<StationStatus>;
+  public stationStatus(stationId: string): Promise<StationStatus>;
+  public stationStatus(): Promise<StationStatus[]>;
   public stationStatus(stationId?: string): Promise<StationStatus | StationStatus[]> {
     return this.stations(this.urls.stationStatus, stationId);
   }
