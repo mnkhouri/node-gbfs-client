@@ -32,8 +32,16 @@ describe('httpClient', function () {
           assert.equal(err.message, 'Failure: status code 301');
         })
     })
-  })
-})
+    it('should resolved with Bixi url', function () {
+      return httpClient.get('https://api-core.bixi.com/gbfs/gbfs.json')
+        .then(function (data) {
+          assert.equal(typeof data, 'string');
+          const bixiData = JSON.parse(data);
+          assert.equal(typeof bixiData, 'object')
+        });
+    });
+  });
+});
 
 describe('gbfsClient', function () {
   describe('#system()', function () {
